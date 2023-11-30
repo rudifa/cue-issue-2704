@@ -1,0 +1,43 @@
+# show
+# force-verbose
+
+exec cue version
+
+# exec cat 7204.cue
+# exec cat 7204.json
+
+# ------------------------------------
+exec cue vet 7204.cue  7204.json
+
+# ------------------------------------
+exec cue eval 7204.cue 7204.json
+
+# files -------------------------------
+
+-- 7204.cue --
+_#Schema
+_#Schema : [...{
+	settingA!: {
+		settingB!: {
+			settingC!: =~"^[+-]?[0-9]+$" | string
+		}
+	}
+}]
+-- 7204.json --
+[
+    {
+        "settingA": {
+            "settingB": {
+                "settingC": "5"
+            }
+        }
+    },
+    {
+        "settingA": {
+            "settingB": {
+                "settingC": "value"
+            }
+        }
+    }
+]
+-- end --

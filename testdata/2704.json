@@ -1,0 +1,16 @@
+[
+    {
+        "settingA": {
+            "settingB": {
+                "settingC": "5"
+            }
+        }
+    },
+    {
+        "settingA": {
+            "settingB": {
+                "settingC": "value"
+            }
+        }
+    }
+]
