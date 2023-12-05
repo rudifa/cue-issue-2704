@@ -1,0 +1,19 @@
+# cue issue #2704
+exec cue vet 2704.cue 2704.json
+
+-- 2704.cue --
+_#Schema
+_#Schema : [...{
+	    settingC: =~"^[+-]?[0-9]+$" | string
+    }
+]
+-- 2704.json --
+[
+    {
+        "settingC": "5"
+    },
+    {
+        "settingC": "value"
+    }
+]
+-- end --

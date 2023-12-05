@@ -17,30 +17,22 @@ import (
 func main() {
 	// fmt.Println("Here we go")
 
-	// testParseFile("testdata/sample.cue")
+	// sampleFile1 := "testdata/2704.cue"
 
-	// cueTestCase("testdata/sample.cue")
-
-	// sampleFile := "testdata/sample.cue"
-	// sampleFile := "testdata/2567-3a.cue"
-	// sampleFile1 := "testdata/fbb-c.cue"
-	// cueTestCase(sampleFile1)
-	// testParser(sampleFile1)
-
-	sampleFile1 := "testdata/2704.cue"
-	sampleFile2 := "testdata/2704.json"
+	// sampleFile1 := "testdata/2704-3.cue"
+	sampleFile1 := "testdata/2704-3.cue"
+	sampleFile2 := "testdata/2704-3.json"
 	cueTestCase2(sampleFile1, sampleFile2)
 
 }
-
 
 func cueTestCase2(filename1, filename2 string) {
 
 	log.Println("----------------------------------------")
 	log.Printf("cueTestCase2: [%s]\n", filename1, filename2)
 
-	files.CatFile(filename1)
-	files.CatFile(filename2)
+	// files.CatFile(filename1)
+	// files.CatFile(filename2)
 
 	// inproc.RunCue("version")
 
@@ -61,7 +53,6 @@ func cueTestCase2(filename1, filename2 string) {
 
 	// inproc.RunCue("export", filename)
 }
-
 
 func cueTestCase(filename string) {
 

@@ -1,14 +1,16 @@
-# cue issue #2704
-
+# cue issue #2704 - please run testscript -v -continue
+exec cue version
 exec cue vet 2704.cue  2704.json
 exec cue eval 2704.cue 2704.json
+
+# files -------------------------------
 
 -- 2704.cue --
 _#Schema
 _#Schema : [...{
-	settingA!: {
-		settingB!: {
-			settingC!: =~"^[+-]?[0-9]+$" | string
+	settingA: {
+		settingB: {
+			settingC: =~"^[+-]?[0-9]+$" | string
 		}
 	}
 }]
