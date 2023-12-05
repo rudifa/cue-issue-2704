@@ -19,8 +19,8 @@ func main() {
 
 	// sampleFile1 := "testdata/2704.cue"
 
-	// sampleFile1 := "testdata/2704-3.cue"
 	sampleFile1 := "testdata/2704-3.cue"
+	// sampleFile1 := "testdata/2704-3-rev.cue"
 	sampleFile2 := "testdata/2704-3.json"
 	cueTestCase2(sampleFile1, sampleFile2)
 
